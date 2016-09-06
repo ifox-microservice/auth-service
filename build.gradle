@@ -25,7 +25,6 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
@@ -35,4 +34,8 @@ dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR5"
 	}
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = "2.14"
 }
